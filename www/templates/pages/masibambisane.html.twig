@@ -1,0 +1,225 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="pages">
+        <div data-page="blogsingle" class="page no-toolbar no-navbar">
+            <div class="page-content">
+
+                <div class="navbarpages navbarpagesbg">
+                    <div class="navbar_left">
+                        <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                              style="width:25px" title=""/></a>
+                    </div>
+                    <div class="navbar_right navbar_right_menu">
+                        <a href="#" data-panel="left" class="open-panel"><img
+                                    src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                    </div>
+
+                </div>
+
+                <div id="pages_maincontent">
+
+                    <a href="{{ path('app_products') }}" class="backto"><img
+                                src="{{ asset('images/icons/black/back.png') }}" alt="" title=""/></a>
+                    <h2 class="blog_title">Masibambisane Rewards</h2>
+                    <!-- Slider -->
+                    <div class="swiper-container-pages">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide12.jpg') }}" alt="" title=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide13.jpg') }}" alt="" title=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide14.jpg') }}" alt="" title=""/>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="page_single layout_fullwidth_padding">
+                        <div class="post_single">
+                            <h5 style="color:red" class="alileft"> FOR THE BENEFIT OF ALL MWPF MEMBERS AND THEIR
+                                FAMILIES</h5>
+
+                            <p class="bigtfont" align="left">The Rewards Programme provides members and their families
+                                with access to savings and special offers on groceries at Shoprite, Checkers and
+                                Checkers Hyper stores in SA through vouchers and digital coupons.</p>
+                            </p>
+
+                            <h3 style="color:grey" class="alileft">1. How to access the Masibambisane Rewards
+                                Programme </h3>
+
+                            <h4 style="color:grey" class="alileft">Coupon booklet: </h4>
+
+                            <p class="bigtfont" align="left"> Discounts are accessed as follows</p>
+
+
+                            <!-- <h4 style="color:white" align="left">On Bereavement:</h4> -->
+                            <div align="left">
+                                <li class="bigtfont" ; align="left">View and select the coupons in the Masibambisane
+                                    Rewards grocery discount coupon book.
+                                </li>
+                                <li class="bigtfont" ; align="left">Cut out the discount coupons that you want to use
+                                    and take these into a Shoprite, Checkers, or Checkers Hyper store when you go
+                                    shopping.
+                                </li>
+                                <li class="bigtfont" ; align="left">Make sure you find the correct product (size, brand,
+                                    description) in order for your discount to apply.
+                                </li>
+                                <li class="bigtfont" ; align="left">Give the cut-out coupons to the teller with the
+                                    product at the till and get the discount off the product right away before you pay.
+                                </li>
+
+                                <h4 style="color:white" class="alileft">Digital coupons:</h4>
+
+                                <p class="bigtfont" align="left"> Redeem your coupons via mobisite <a
+                                            href='https://www.mwpfrewards.co.za' class="ms-layer sbut1" target="_blank"
+                                            style="font-size:20px; padding:10px 10px; color:white">www.mwpfrewards.co.za</a>
+                                    or via USSD: <span class="ms-layer sbut1" target="_blank"
+                                                       style="background:#eb2027; font-size:20px; padding:6px 10px; color:#fff"><strong>  Dial *120*207# </strong></span>
+                                </p>
+                                <br>
+
+                                <div align="left">
+                                    <li class="bigtfont" ; align="left">Option 1 – dial *120*207#</li>
+                                    <li class="bigtfont" ; align="left">Option 2 – go to www.mwpfrewards.co.za</li>
+                                    <li class="bigtfont" ; align="left">If you are the main member login using your
+                                        industry number.
+                                    </li>
+                                    <li class="bigtfont" ; align="left">If you are a nominated family member login using
+                                        your ID number.
+                                    </li>
+                                    <li class="bigtfont" ; align="left">Browse the available discount coupons.</li>
+                                    <li class="bigtfont" ; align="left">Decide what you want to use and add your
+                                        selected coupons to your basket.
+                                    </li>
+                                    <li class="bigtfont" ; align="left">When you are finished adding the discounts to
+                                        your basket, remember to “checkout” before you go to the shops.
+                                    </li>
+                                    <li class="bigtfont" ; align="left">You will receive an SMS with the products that
+                                        you selected in it as well as coupon codes you need to show the teller before
+                                        you pay.
+                                    </li>
+
+                                    <li class="bigtfont" ; align="left">Take your coupon SMS when you go shopping at
+                                        Shoprite, Checkers, or Checkers Hyper, find the product advertised on the
+                                        coupon.
+                                    </li>
+
+                                    <li class="bigtfont" ; align="left">Give the coupon code to the teller with the
+                                        product at the till and get the discount off the product right away.
+                                    </li>
+
+                                    <li class="bigtfont" ; align="left">Remember to make sure you find the correct
+                                        product (Size, Brand, Description) in order for your discount to apply.
+                                    </li>
+
+
+                                    <br><br><br>
+                                    <h3 style="color:grey" class="alileft">2. How to give your family members access to
+                                        your Masibambisane Rewards</h3>
+
+                                    <p class="bigtfont" align="left"> Each member can give access to 2 family
+                                        members</p>
+                                    <br>
+
+                                    <h4 style="color:grey" class="alileft">Option 1:</h4>
+                                    <!-- <h4 style="color:white" align="left">On Bereavement:</h4> -->
+                                    <div align="left">
+                                        <li class="bigtfont" ; align="left"> Send an SMS with your Industry number,
+                                            family member’s ID number and your family member’s cell number to <span
+                                                    class="ms-layer sbut1" target="_blank"
+                                                    style="background: #eb2027; font-size:20px; padding:6px 10px; color:#fff"><strong>  49967</strong></span>.
+                                            To nominate a second family member, repeat the above with the second family
+                                            member’s details.
+                                        </li>
+                                        <br>
+
+                                        <h4 style="color:grey" class="alileft">Option 2:</h4>
+                                        <!-- <h4 style="color:white" align="left">On Bereavement:</h4> -->
+                                        <div align="left">
+                                            <li class="bigtfont" ; align="left"> Call the MWPF call centre on<strong>
+                                                    010 100 3000. </strong></li>
+
+                                            <br>
+
+                                            <h4 style="color:grey" class="alileft">Option 3:</h4>
+                                            <!-- <h4 style="color:white" align="left">On Bereavement:</h4> -->
+                                            <div align="left">
+                                                <li class="bigtfont" ; align="left"><span class="ms-layer sbut1"
+                                                                                          target="_blank"
+                                                                                          style="background:#eb2027; font-size:20px; padding:6px 10px; color:#fff"><strong>  Dial *120*207#</strong></span>,
+                                                    log in and select <strong>“nominate a family member”</strong>, and
+                                                    follow the prompts.
+                                                </li>
+
+                                                <br><br><br>
+
+                                                <h3 style="color:grey" class="alileft">3. How do I change a family
+                                                    member details to get access to Masibambisane Rewards </h3>
+
+                                                <!-- <h4 style="color:white" align="left">On Bereavement:</h4> -->
+                                                <div align="left">
+                                                    <li class="bigtfont" ; align="left"> Please provide the following
+                                                        information: Industry Number, old family member’s ID and cell
+                                                        phone number, new family member’s ID number and cell phone
+                                                        number.
+                                                    </li>
+
+
+                                                    <br><br>
+
+                                                    <h3 style="color:grey" class="alileft">4. If you have a problem when
+                                                        shopping </h3>
+
+
+                                                    <!-- <h4 style="color:white" align="left">On Bereavement:</h4> -->
+                                                    <div align="left">
+                                                        <li class="bigtfont" ; align="left">Please ask to speak to the
+                                                            manager and show them your digital or paper coupons.
+                                                        </li>
+
+                                                        <li class="bigtfont" ; align="left">SMS
+                                                            <strong>“Masibambisane”</strong> to <span
+                                                                    class="ms-layer sbut1" target="_blank"
+                                                                    style="background: #eb2027; font-size:20px; padding:6px 10px; color:#fff"><strong>  49967</strong></span>
+                                                            and an agent will call you back to assist. Please note that
+                                                            agents only work during office hours.
+                                                        </li>
+
+
+                                                        <li class="bigtfont" ; align="left">Call the MWPF call centre on
+                                                            010 100 3000.
+                                                        </li>
+
+
+                                                        <br>
+
+                                                        <br>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="close_popup_button">
+                    <a href="#" class="close-popup" data-popup=".popup-terms"><img
+                                src="{{ asset('images/icons/black/menu_close.png') }}" alt="" title=""/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

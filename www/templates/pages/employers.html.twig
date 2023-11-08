@@ -1,0 +1,163 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="pages">
+        <div data-page="photos" class="page no-toolbar no-navbar">
+            <div class="page-content">
+
+                <div class="navbarpages navbarpagesbg">
+                    <div class="navbar_left navbar_right_menu">
+                        <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                              style="width:25px" title=""/></a>
+                    </div>
+                    <div class="navbar_right navbar_right_menu">
+                        <a href="#" data-panel="left" class="open-panel"><img
+                                    src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                    </div>
+
+                </div>
+
+                <div class="bottombarpages">
+                    <div class="gallery_switch">
+                        <a href="#" id="view13" class="switcher active"><img
+                                    src="{{ asset('images/switch_13_active.png') }}" alt="Grid"></a>
+                        <a href="#" id="view12" class="switcher"><img src="{{ asset('images/switch_12.png') }}"
+                                                                      alt="Grid"></a>
+                        <a href="#" id="view11" class="switcher"><img src="{{ asset('images/switch_11.png') }}"
+                                                                      alt="List"></a>
+                    </div>
+                </div>
+
+                <div id="pages_maincontent">
+
+                    <h2 class="page_title">PARTICIPATING EMPLOYERS</h2>
+
+                    <div class="page_single layout_fullwidth">
+
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/mwpfslider5.jpg') }}" alt="" title=""/>
+                            </div>
+                         
+                        </div>
+                <br>
+                        <div class="tabs tabs--photos">
+
+                            <input type="radio" name="tabs" class="tabradio" id="tabone" checked="checked">
+                            <label class="tablabel tablabel--13" for="tabone">A - D</label>
+                            <div class="tab">
+                                <ul class="photo_gallery_13">
+                                    <!--   <li><a href="{{ asset('images/employers/adcorp_logo_small.jpg') }}" title="Employer"><img src="{{ asset('images/employers/adcorp_logo_small.jpg') }}" alt="image"/></a></li> -->
+                                    <li><a href="{{ asset('images/employers/african_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/african_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <!--  <li><a href="{{ asset('images/employers/anglo_coal_logo_small.jpg') }}" title="Employer"><img src="{{ asset('images/employers/anglo_coal_logo_small.jpg') }}" alt="image"/></a></li>-->
+                                    <!--  <li><a href="{{ asset('images/employers/anglogold_logo_small.jpg') }}" title="Employer"><img src="{{ asset('images/employers/anglogold_logo_small.jpg') }}" alt="image"/></a></li>-->
+                                    <!-- <li><a href="{{ asset('images/employers/arnot_logo_small.jpg') }}" title="Employer"><img src="{{ asset('images/employers/arnot_logo_small.jpg') }}" alt="image"/></a></li> -->
+                                    <li><a href="{{ asset('images/employers/assmang_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/assmang_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <!-- <li><a href="{{ asset('images/employers/BHP_Billiton_logo_small.jpg') }}" title="Employer"><img src="{{ asset('images/employers/BHP_Billiton_logo_small.jpg') }}" alt="image"/></a></li>-->
+                                    <li><a href="{{ asset('images/employers/covalent_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/covalent_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <li><a href="{{ asset('images/employers/drd_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/drd_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+
+                                    <div class="clearleft"></div>
+                                </ul>
+                            </div>
+
+                            <input type="radio" name="tabs" class="tabradio" id="tabtwo">
+                            <label class="tablabel tablabel--13" for="tabtwo">E - M</label>
+                            <div class="tab">
+                                <ul class="photo_gallery_13">
+                                    <li><a href="{{ asset('images/employers/evander_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/evander_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <li><a href="{{ asset('images/employers/exxaro_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/exxaro_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <li><a href="{{ asset('images/employers/glencore_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/glencore_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <li><a href="{{ asset('images/employers/goldfields_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/goldfields_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <li><a href="{{ asset('images/employers/harmony_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/harmony_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <!-- <li><a href="{{ asset('images/employers/INGWE-LOGO_small.jpg') }}" title="Employer"><img src="{{ asset('images/employers/INGWE-LOGO_small.jpg') }}" alt="image"/></a></li>-->
+                                    <!-- <li><a href="{{ asset('images/employers/kangra_logo_small.jpg') }}" title="Employer"><img src="{{ asset('images/employers/kangra_logo_small.jpg') }}" alt="image"/></a></li>-->
+                                    <li><a href="{{ asset('images/employers/logo_mwpf_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/logo_mwpf_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <li><a href="{{ asset('images/employers/midvaal_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/midvaal_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+
+                                    <div class="clearleft"></div>
+                                </ul>
+                            </div>
+                            <input type="radio" name="tabs" class="tabradio" id="tabthree">
+                            <label class="tablabel tablabel--13" for="tabthree">M - U</label>
+                            <div class="tab">
+                                <ul class="photo_gallery_13">
+                                    <li><a href="{{ asset('images/employers/msobo_logo_small.jpg') }}" title="Employer"><img
+                                                    src="{{ asset('images/employers/msobo_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <li><a href="{{ asset('images/employers/northam_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/northam_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <li><a href="{{ asset('images/employers/redpath_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/redpath_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <li><a href="{{ asset('images/employers/seriti_logo_small.jpg') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/seriti_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+                                    <li><a href="{{ asset('images/employers/siyabonga_still_water2.png') }}"
+                                           title="Employer"><img
+                                                    src="{{ asset('images/employers/siyabonga_still_water2.png') }}"
+                                                    alt="image"/></a></li>
+                                    
+                                    <!-- <li><a href="{{ asset('images/employers/south32_logo_small.jpg') }}" title="Employer"><img src="{{ asset('images/employers/south32_logo_small.jpg') }}" alt="image"/></a></li> -->
+                                    <!--<li><a href="{{ asset('images/employers/tendele_logo_small.jpg') }}" title="Employer"><img src="{{ asset('images/employers/tendele_logo_small.jpg') }}" alt="image"/></a></li> -->
+                                    <li><a href="{{ asset('images/employers/umusa_logo_small.jpg') }}" title="Employer"><img
+                                                    src="{{ asset('images/employers/umusa_logo_small.jpg') }}"
+                                                    alt="image"/></a></li>
+
+                                    <div class="clearleft"></div>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="clearleft"></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

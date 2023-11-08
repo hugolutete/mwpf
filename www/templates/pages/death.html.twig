@@ -1,0 +1,255 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="pages">
+        <div data-page="blogsingle" class="page no-toolbar no-navbar">
+            <div class="page-content">
+
+                <div class="navbarpages navbarpagesbg">
+                    <div class="navbar_left">
+                        <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                              style="width:25px" title=""/></a>
+                    </div>
+                    <div class="navbar_right navbar_right_menu">
+                        <a href="#" data-panel="left" class="open-panel"><img
+                                    src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                    </div>
+
+                </div>
+
+                <div id="pages_maincontent">
+
+                    <a href="{{ path('app_products') }}" class="backto"><img
+                                src="{{ asset('images/icons/black/back.png') }}" alt="" title=""/></a>
+                    <h2 class="blog_title">Death Benefit</h2>
+
+                    <!-- Slider -->
+                    <div class="swiper-container-pages">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide13.jpg') }}" alt="" title=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide12.jpg') }}" alt="" title=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide14.jpg') }}" alt="" title=""/>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="page_single layout_fullwidth_padding">
+
+                        <div class="post_single">
+
+                            <h5><strong style="color: red"> THE BENEFIT WILL BE AS FOLLOW </strong></h5>
+
+                            <p align="left" class="bigtfont">
+                                <li class="bigtfont" ; align="left" style="color:#000000">3 x basic annual salary</li>
+                                <li class="bigtfont" ; align="left" style="color:#000000">The total retirement
+                                    contributions;
+                                </li>
+                                <li class="bigtfont" ; align="left" style="color:#000000">Total Voluntary
+                                    Contributions;
+                                </li>
+                                <li class="bigtfont" ; align="left" style="color:#000000">Total Transferred Portion;
+                                    and
+                                </li>
+                                <li class="bigtfont" ; align="left" style="color:#000000">Net investment return.</li>
+                                <br>
+                            </p>
+
+                            <a href="#" data-popup=".popup-social" class="button_full btmint open-popup">Share this
+                                product</a>
+                        </div>
+
+                        <p style="color:#000000">The above benefit will be taxed as per the Income Tax Act of South
+                            Africa.
+                            A funeral benefit is payable from the Fund in the event of death a Member, Spouse or
+                            children.
+                        </p>
+
+                        <p align="left">
+                            <strong style="color: red" class="all caps"> Documents required: </strong></li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Death claim form signed by two
+                                Employer authorised signatories and stamped by the mine;
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Deceased nomination of
+                                beneficiaries form;
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Original certified copy of death
+                                certificate;
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Original certified copy of death
+                                certificate from country of origin if not South African, eg Lesotho,Mozambique,
+                                Botswana, etc.
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Translation of the certified death
+                                certificate into English should also be obtained;
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Original certified copy of
+                                deceased‘s identity document or passport;
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Original beneficiaries’ bank
+                                statements with bank stamps;
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Original certified copy of
+                                marriage certificate and original certified copy of identity document or certified copy
+                                of passport of the spouse (For marriages registered at Home Affairs after the death of a
+                                member,
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">A customary union letter signed by
+                                three of the deceased’s family members before their Chief or Magistrate together with
+                                their certified identity documents copies or passport copies should be submitted);
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">A letter signed by three relatives
+                                of the deceased in front of their Chief or Magistrate with certified copies of their
+                                identity documents or certified passports copies confirming that the member was never
+                                married and had no children;
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Beneficiaries’ fully completed
+                                affidavit of dependency forms (MW16) signed and stamped by the Commissioner of Oaths
+                                listing all minor children must be submitted;
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Major children must complete their
+                                own affidavit of dependency, signed and stamped by the Commissioner of Oaths;
+                            </li>
+
+                        </p>
+
+
+                        <h6 style="color: #000000" class="alileft"><i class="fa fa-money" style="color:#000000"></i>&nbsp;
+                            FOR CLAIMS, PLEASE CONTACT YOUR HR<br><br>
+
+                            <i class="icon-users" style="color:#000000"></i>&nbsp; FOR GENERAL ENQUIRIES, CONTACT US ON:
+                            <br>&nbsp; &nbsp; Tel: +27 (0)10 100 3001 <br>
+                            &nbsp; &nbsp; E-mail:<a href="mailto:clientservices@mineworkers.co.za">
+                                clientservices@mineworkers.co.za</a></h6>
+
+
+                        <li class="bigtfont" ; align="left" style="color:#000000">All beneficiaries, including major
+                            children must submit an affidavit signed and stamped by the Commissioner of Oaths stating
+                            clearly the extent of their dependency on the deceased;
+                        </li>
+                        <li class="bigtfont" ; align="left" style="color:#000000">Original certified copies of minor
+                            children (below 20 years)’s birth certificates, identity documents or passports must be
+                            submitted;
+                        </li>
+                        <li class="bigtfont" ; align="left" style="color:#000000">Original certified copies of identity
+                            documents or passports of major children must be submitted;
+                        </li>
+                        <li class="bigtfont" ; align="left" style="color:#000000">Guardian’s original bank statement
+                            with bank stamp must be submitted;
+                        </li>
+                        <li class="bigtfont" ; align="left" style="color:#000000">All major children still at school
+                            must submit a letter from school or the institution confirming that they are still at
+                            school;
+                        </li>
+
+                        <p align="left"><br>
+                            <strong>For children not using the deceased surname:</strong><br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">A letter or affidavit from the
+                                deceased family confirming that the children belonged to the deceased must be submitted.
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">The letter or affidavit must be
+                                signed by three of the family members in front of their Chief or Magistrate together
+                                with certified copies of their identity documents or passports (Alternatives are
+                                maintenance orders or unabridged birth certificates showing names of both parents;
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Proof of guardianship from a
+                                social worker’s background report for minors not residing with their biological parents
+                                must be submitted. The report must be stamped by the social worker;
+                            </li>
+                            <br>
+
+                        </p>
+                        <strong style="color: red" class="all caps"> The benefit payable is as follows:</strong><br>
+
+
+                        <table style="border:2px solid #000000; color: black">
+                            <tr style="border:2px solid #000000; background: grey ; color: black; font-weight: bold;">
+                                <td>Members</td>
+                                <td>R40 000</td>
+                            </tr>
+                            <tr style="border:2px solid #000000; background: lightgrey; color: black; font-weight: bold;">
+                                <td>Spouse (regardless of number)</td>
+                                <td>R40 000</td>
+                            </tr>
+
+                            <tr style="border:2px solid #000000; background: grey;color: black; font-weight: bold;">
+
+                                <td>Children (aged 14 to 21)</td>
+                                <td>R40 000</td>
+                            </tr>
+
+                            <tr style="border:2px solid #000000; background: lightgrey ; color: black; font-weight: bold;">
+                                <td>Children (aged 21 to 25 proof of study will be required)</td>
+                                <td>R40 000</td>
+                            </tr>
+
+                            <tr style="border:2px solid #000000; background: grey ; color: black; font-weight: bold;">
+                                <td>Children (aged 6 to 13)</td>
+                                <td>R25 000</td>
+                            </tr>
+
+                            <tr style="border:2px solid #000000; background: lightgrey; color: black; font-weight: bold;">
+                                <td>Children (aged 1 to 5)</td>
+                                <td>R15 000</td>
+
+                            <tr style="border:2px solid #000000; background: grey; color: black; font-weight: bold;">
+                                <td>Children younger than 1 year</td>
+                                <td>R15 000</td>
+                            </tr>
+                            </tr>
+                        </table>
+
+                        <br>
+                        <p align="left">
+                            If you die, your next of kin or spouse must report your death to your employer’s Human
+                            Resources office. When reporting your death your spouse or next of kin should bring along a
+                            certified copy of your death certificate and your identity document. This will ensure that
+                            theProcess of paying the funeral benefit is done as soon as possible and that the death
+                            benefit claim from the Fund is initiated.
+                            There are many documents that need to be submitted, the sooner this is done the sooner your
+                            benefits can be paid.
+
+                        </p>
+
+
+                        <p align="left">
+
+                            <strong style="color: red" class="all caps"> Summary of claims process :</strong><br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Complete the claim form<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Get the employer to sign the claim
+                                form<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Prepare and ensure you have all
+                                required, supporting documents<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Submit the signed claim form with
+                                all supporting documents to your HR Office<br><br>
+                        </p>
+                        <p align="left">
+
+                            <strong style="color: red" class="all caps"> The claims process::</strong><br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">All documents are received and
+                                verified
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Claims are investigated by the
+                                trustees to determine benefit allocation
+                            </li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Tax calculation is applied</li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Bank verification is received</li>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Payment is made</li>
+
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

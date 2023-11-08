@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div data-page="contact" class="page no-toolbar no-navbar">
+        <div class="page-content">
+
+            <div class="navbarpages navbarpagesbg">
+                <div class="navbar_left">
+                    <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                          style="width:25px" title=""/></a>
+                </div>
+                <div class="navbar_right navbar_right_menu">
+                    <a href="#" data-panel="left" class="open-panel"><img
+                                src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                </div>
+
+            </div>
+
+            <div id="pages_maincontent">
+
+                <h2 class="page_title">CONTACT MWPF</h2>
+                <div class="swiper-container-pages">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/mwpfslider5.jpg') }}" alt="" title=""/>
+                            </div>
+                         
+                        </div>
+                 
+                    </div>
+                <div class="page_single layout_fullwidth_padding">
+
+                    <h2 id="Note"></h2>
+                    <div class="contactform">
+                        {{ form_start(form) }}
+                        {{ form_row(form.name) }}
+                        {{ form_row(form.email) }}
+                        {{ form_row(form.message) }}
+                        <input type="submit" name="submit" class="form_submit" id="submit" value="Send"/>
+                        {{ form_end(form) }}
+                    </div>
+
+                    <h3>Our Offices</h3>
+
+                    <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Mine+Workers+Provident+Fund, Johannesburg+South+Africa&&amp;aq=0&amp;oq=Oakdene&amp;sll=-26.1913740,28.0358940&amp;sspn=0.008999,0.016544&amp;ie=UTF8&amp;hq=&amp;hnear=Johannesburg,+Braamfontein&amp;t=m&amp;z=7&amp;iwloc=A&amp;output=embed"
+                            width="100%" height="200" frameborder="0" style="border:0"></iframe>
+                    <blockquote>
+                        <h4 class="caps"><i class="fa fa-bank" style="color: #b90f00"></i><strong> Mineworkers Provident
+                                Fund </strong></h4>
+                        <ul>
+                            <strong style="color: red" align="right"> JOHANNESBURG - SOUTH AFRICA</strong><br/> 3rd &
+                            4th Floor | 26 Ameshoff Street<br/> Braamfontein, 2001<br/> Tel: +27 (0)10 100 3001<br/>
+                            Fax: +27 (0)86 661 9532<br/>
+                            <a style="color: red" href="mailto:clientservices@mineworkers.co.za">
+                                clientservices@mineworkers.co.za</a><br/>
+                        </ul>
+                    </blockquote>
+
+                    <a href="tel:+27101003001" class="button_full btyellow external">Call Us Now!</a>
+
+                    <div class="clear"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

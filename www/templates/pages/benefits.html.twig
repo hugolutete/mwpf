@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="pages">
+        <div data-page="music" class="page no-toolbar no-navbar">
+            <div class="page-content">
+
+                <div class="navbarpages navbarpagesbg">
+                    <div class="navbar_left">
+                        <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                              style="width:25px" title=""/></a>
+                    </div>
+                    <div class="navbar_right navbar_right_menu">
+                        <a href="#" data-panel="left" class="open-panel"><img
+                                    src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                    </div>
+
+                </div>
+
+                <div id="pages_maincontent">
+
+                    <h2 class="page_title">YOUR BENEFITS EXPLAINED</h2>
+                    <div class="swiper-container-pages">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/mwpfslider5.jpg') }}" alt="" title=""/>
+                        </div>
+                      
+                        
+                    </div>
+
+                  
+                </div>
+                    <div class="page_single layout_fullwidth_padding">
+
+                        <div class="tabs">
+
+                            <input type="radio" name="tabs3" class="tabradio" id="tab3" checked="checked">
+                            <label class="tablabel tablabel--13" for="tab3">ENGLISH</label>
+                            <div class="tab">
+                                <div class="page_single layout_fullwidth_padding">
+                                    <ul class="music_list">
+                                        <li>
+                                            <h4>Resigned Dismissed Retrenched <span>EN001</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/E01_Resigned_Dismissed_Retrenched.mp3') }}"
+                                                   preload="auto"></audio>
+                                        </li>
+                                        <li>
+                                            <h4>Disability <span>EN002</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/E02_Disability.mp3') }}"
+                                                   preload="auto"></audio>
+                                        </li>
+                                        <li>
+                                            <h4>Death <span>EN003</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/E03_Death.mp3') }}" preload="auto"></audio>
+                                        </li>
+                                        <li>
+                                            <h4>Funeral Repatriation <span>EN004</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/E04_MWPF_Funeral_Repatriation.mp3') }}"
+                                                   preload="auto"></audio>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <input type="radio" name="tabs3" class="tabradio" id="tab4">
+                            <label class="tablabel tablabel--13" for="tab4">IsiZULU</label>
+                            <div class="tab">
+                                <div class="page_single layout_fullwidth_padding">
+                                    <ul class="music_list">
+                                        <li>
+                                            <h4>Resigned Dismissed Retrenched <span>ZU001</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/Z01_Resigned_Dismissed_Retrenched.mp3') }}"
+                                                   preload="auto"></audio>
+                                        </li>
+                                        <li>
+                                            <h4>Disability <span>ZU002</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/Z02_Disability.mp3') }}"
+                                                   preload="auto"></audio>
+                                        </li>
+                                        <li>
+                                            <h4>Death <span>ZU003</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/Z03_Death.mp3') }}" preload="auto"></audio>
+                                        </li>
+                                        <li>
+                                            <h4>Funeral Repatriation <span>ZU004</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/Z04_Funeral_Repatriation.mp3') }}"
+                                                   preload="auto"></audio>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <input type="radio" name="tabs3" class="tabradio" id="tab5">
+                            <label class="tablabel tablabel--13" for="tab5">SeSOTHO</label>
+                            <div class="tab">
+                                <div class="page_single layout_fullwidth_padding">
+                                    <ul class="music_list">
+                                        <li>
+                                            <h4>Resigned Dismissed Retrenched <span>SS001</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/SS01_Resigned_Dismissed_Retrenched.mp3') }}"
+                                                   preload="auto"></audio>
+                                        </li>
+                                        <li>
+                                            <h4>Disability <span>SS002</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/SS02_Disability.mp3') }}"
+                                                   preload="auto"></audio>
+                                        </li>
+                                        <li>
+                                            <h4>Death <span>SS003</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/SS03_Death.mp3') }}"
+                                                   preload="auto"></audio>
+                                        </li>
+                                        <li>
+                                            <h4>Funeral Repatriation <span>SS004</span></h4>
+                                            <audio src="{{ asset('mwpf_audio/SS04_MWPF_Funeral_Repatriation.mp3') }}"
+                                                   preload="auto"></audio>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/audio.min.js') }}"></script>
+{% endblock %}

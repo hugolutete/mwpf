@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  www:
+    build:
+      context: ./www
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    container_name: mwpf-www
+    depends_on: [ db, mailhog ]
+    ports:
+      - "57880:80"
+    volumes:
+      - ./000-default.conf:/etc/apache2/sites-available/000-default.conf:ro
+      - ./.bashrc:/root/.bashrc:ro
+      - ./www:/var/www/project
+
+  # https://akrabat.com/using-mailhog-via-docker-for-testing-email/
+  mailhog:
+    image: mailhog/mailhog
+    restart: unless-stopped
+    container_name: mwpf-mailhog
+    logging:
+      driver: 'none'  # disable saving logs
+    ports:
+      - "51025:1025" # smtp server
+      - "58025:8025" # web ui
+
+  phpmyadmin:
+    image: phpmyadmin
+    restart: unless-stopped
+    container_name: mwpf-phpmyadmin
+    depends_on: [ db ]
+    ports:
+      - "57888:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: app_development
+      PMA_PASSWORD: password
+  
+  db:
+    image: mysql
+    restart: unless-stopped
+    container_name: mwpf-db
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: yes
+      MYSQL_USER: app_development
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: mwpf_mobile
+
+volumes:
+  db_data:

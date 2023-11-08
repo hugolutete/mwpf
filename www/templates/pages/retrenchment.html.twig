@@ -1,0 +1,188 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="pages">
+        <div data-page="blogsingle" class="page no-toolbar no-navbar">
+            <div class="page-content">
+
+                <div class="navbarpages navbarpagesbg">
+                    <div class="navbar_left">
+                        <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                              style="width:25px" title=""/></a>
+                    </div>
+                    <div class="navbar_right navbar_right_menu">
+                        <a href="#" data-panel="left" class="open-panel"><img
+                                    src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                    </div>
+
+                </div>
+
+                <div id="pages_maincontent">
+
+                    <a href="{{ path('app_products') }}" class="backto"><img
+                                src="{{ asset('images/icons/black/back.png') }}" alt="" title=""/></a>
+                    <h2 class="blog_title">Retrenchment Benefit</h2>
+                    <!-- Slider -->
+                    <div class="swiper-container-pages">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide14.jpg') }}" alt="" title=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide12.jpg') }}" alt="" title=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide13.jpg') }}" alt="" title=""/>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="page_single layout_fullwidth_padding">
+                        <div class="post_single">
+
+                            <p align="left"> Should you resign or be dismissed, you will have the option to receive a
+                                cash lump sum equal to your Fund Credit.</p>
+
+                            <p align="left">
+                                <strong style="color: red" class="all caps">Your Fund Credit will be:</strong><br>
+                                <li class="bigtfont" align="left" style="color:#000000"> The total retirement
+                                    contributions;<br>
+                                <li class="bigtfont" align="left" style="color:#000000"> Total Voluntary
+                                    Contributions;<br>
+                                <li class="bigtfont" align="left" style="color:#000000"> Total Transferred Portion;
+                                    and<br>
+                                <li class="bigtfont" align="left" style="color:#000000"> Net investment return.
+                            </p>
+                            <br>
+
+                            <a href="#" data-popup=".popup-social" class="button_full btmint open-popup">Share this
+                                product</a>
+                        </div>
+
+
+                        <div id="st-accordion-three" class="st-accordion-two" style='color:#000000'>
+                            <strong style="color: red" class="all caps"> Retrenchment</strong><br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">The benefit payable on
+                                retrenchment is identical to the benefit payable on dismissal or resignation.<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">You may elect to take the benefit
+                                in cash or transfer the tax-free benefit either to an approved Provident Fund,
+                                Retirement Annuity and Preservation Provident Fund.<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Transfers to approved Pension Fund
+                                and Pension Preservation Fund will attract tax.<br>
+                                <br>
+
+                                <strong style="color: red" class="bigtfont; all caps"> Payment options</strong><br>
+
+                            <li class="bigtfont" ; align="left" style="color:#000000"><b> You may take your full fund
+                                    credit in cash, just remember that you will pay tax on a portion of the money.</b>
+
+                                <p align="left">
+
+                                    <strong style="color: red" class="all caps">
+                                        <center> OR</center>
+                                    </strong><br>
+                                </p>
+
+                            <li class="bigtfont" ; align="left" style="color:#000000"><b> You may transfer your full
+                                    benefit to an approved provident fund or retirement annuity fund tax free.</b>
+
+                                <p align="left">
+                                    <strong style="color: red" class="all caps">
+                                        <center> OR</center>
+                                    </strong><br>
+                                </p>
+
+                            <li class="bigtfont" ; align="left" style="color:#000000"><b> You may transfer your benefit
+                                    to an approved preservation fund, which is subject to the requirements of the
+                                    revenue authorities.</b>
+
+                                <p align="left">
+                                    <strong style="color: red" class="all caps">
+                                        <center> OR</center>
+                                    </strong><br>
+                                </p>
+
+                            <li class="bigtfont" ; align="left" style="color:#000000"><b> The Rules of the Fund provides
+                                    for members to defer their benefits until retirement age on resignation, dismissal
+                                    and retrenchment.</b><br>
+
+                                <p align="left"><br>
+
+                                    <strong style="color: red" class="all caps"> The following will apply to a deferred
+                                        benefit:</strong><br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">The minimum amount should be R10
+                                000<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">No further contributions will be
+                                permitted<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">All benefits (Group life cover,
+                                ill health and funeral) ceases<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">The differed benefits will
+                                continue to be credited with net investment returns.<br>
+                                </p>
+
+                                <p align="left">
+                                    <strong style="color: red" class="all caps">Documents required:</strong><br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">A certified copy of your identity
+                                document, birth certificate or passport-displaying your photo and the passport’s expiry
+                                date.<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Banking details (copy of bank
+                                statement stamped by the bank).<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Withdrawal (Resignation, Dismissal
+                                & Retrenchment) claim form signed by the member and two Employer authorised signatories.<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">The withdrawal form must be
+                                stamped by the mine;<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">A letter stating your intention to
+                                transfer the full or part of the withdrawal benefit containing the institution’s contact
+                                details and policy details (if applicable).<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">An original or copy of an annuity
+                                letter, reflecting the annuity policy number (if you wish to transfer the full or part
+                                of your benefit to an annuity fund/registered pension/provident fund), or the original
+                                signed annuity application form, or the original letter from the broker (if applicable).<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">A foreign exchange questionnaire
+                                (if applicable).<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">A payslip (if your current income
+                                is less than R60 000 per year).<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">A letter from your employer
+                                confirming your resignation, dismissal or retrenchment.<br>
+                                <br>
+
+                                <b> You may take your full fund credit in cash, just remember that you will pay tax on a
+                                    portion of the money.</b><br><br>
+                                </p>
+
+                                <p align="left">
+                                    <strong style="color: red" class="all caps"> Summary of claims process:</strong><br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Complete the claim form<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Get the employer to sign the claim
+                                form<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Prepare and ensure you have all
+                                required, supporting documents<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Submit the signed claim form with
+                                all supporting documents to your HR Office<br>
+                                </p>
+                                <br>
+
+                                <p align="left">
+
+                                    <strong style="color: red" class="all caps"> The claims process::</strong><br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">All documents are received and
+                                verified<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Claims are investigated by the
+                                trustees to determine benefit allocation<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Tax calculation is applied<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Bank verification is received<br>
+                            <li class="bigtfont" ; align="left" style="color:#000000">Payment is made
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

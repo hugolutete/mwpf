@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="pages">
+        <div data-page="blogsingle" class="page no-toolbar no-navbar">
+            <div class="page-content">
+
+                <div class="navbarpages navbarpagesbg">
+                    <div class="navbar_left">
+                        <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                              style="width:25px" title=""/></a>
+                    </div>
+                    <div class="navbar_right navbar_right_menu">
+                        <a href="#" data-panel="left" class="open-panel"><img
+                                    src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                    </div>
+
+                </div>
+
+                <div id="pages_maincontent">
+
+                    <a href="{{ path('app_products') }}" class="backto"><img
+                                src="{{ asset('images/icons/black/back.png') }}" alt="" title=""/></a>
+                    <h2 class="blog_title">Funeral Benefit</h2>
+                    <!-- Slider -->
+                    <div class="swiper-container-pages">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide13.jpg') }}" alt="" title=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide12.jpg') }}" alt="" title=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide14.jpg') }}" alt="" title=""/>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="page_single layout_fullwidth_padding">
+                        <div class="post_single">
+                            <h5 style="color:red" class="">THIS IS HOW IT WORKS</h5>
+                            <p class="bigtfont" align="left">A funeral benefit is payable from the fund in the event of
+                                the death of a member, spouse or a child. The benefit payable is as follows.</p>
+                            </p>
+
+                            <a href="#" data-popup=".popup-social" class="button_full btmint open-popup">Share this
+                                product</a>
+                        </div>
+
+                        <table style="border:2px solid #000000; color: black">
+                            <tr style="border:2px solid #000000; background: grey ; color: black; font-weight: bold;">
+                                <td>Members</td>
+                                <td>R40 000</td>
+                            </tr>
+                            <tr style="border:2px solid #000000; background: lightgrey; color: black; font-weight: bold;">
+                                <td>Spouse (regardless of number)</td>
+                                <td>R40 000</td>
+                            </tr>
+
+                            <tr style="border:2px solid #000000; background: grey;color: black; font-weight: bold;">
+
+                                <td>Children aged 14 to 25 (children aged 21 to 25 proof of study will be required)</td>
+                                <td>R40 000</td>
+                            </tr>
+
+
+                            <tr style="border:2px solid #000000; background: grey ; color: black; font-weight: bold;">
+                                <td>Children (aged 6 to 13)</td>
+                                <td>R25 000</td>
+                            </tr>
+
+                            <tr style="border:2px solid #000000; background: lightgrey; color: black; font-weight: bold;">
+                                <td>Children (aged 1 to 5)</td>
+                                <td>R15 000</td>
+
+                            <tr style="border:2px solid #000000; background: grey; color: black; font-weight: bold;">
+                                <td>Children younger than 1 year</td>
+                                <td>R15 000</td>
+                            </tr>
+                            </tr>
+                        </table>
+
+
+                        <p class="bigtfont" align="left">The funeral benefit of R40 000 is also payable when a member
+                            who exited the Fund through retirement dies.</p>
+                        </p>
+
+                        <h3 style="color:#000000" class="alileft">FAMILY ASSISTANCE BENEFIT:</h3>
+                        <p class="bigtfont" align="left">The Fund offers a Family Assistance Benefit (FAB) through its
+                            Group Risk Benefit service provider, Momentum, which can be accessed 24hours/365 days a year
+                            that provides invaluable support to members during traumatic life events.</p>
+
+                        <h3 style="color:red" class="alileft">THE FAB PROVIDES HELP IN MANY WAYS:</h3>
+                        <h4 style="color:#000000" align="left">On Bereavement:</h4>
+
+                        <li class="bigtfont" ; align="left">Repatriation – to ensure the deceased is safely returned
+                            home for burial;
+                        </li>
+                        <li class="bigtfont" ; align="left">Funeral assistance - to help with funeral arrangements for
+                            the deceased;
+                        </li>
+                        <li class="bigtfont" ; align="left"> Legal advice – in the form of legal assistance provided by
+                            admitted attorneys;
+                        </li>
+                        <li class="bigtfont" ; align="left"> Bereavement counselling - in the form of face-to-face
+                            counselling services for support and advice;
+                        </li>
+                        <br>
+
+
+                        <h4 style="color:red" align="left">On Trauma such as rape, assault, etc:</h4>
+
+                        <li class="bigtfont" ; align="left">Trauma assault and HIV counselling</li>
+                        <li class="bigtfont" ; align="left">Emergency Medical Services.</li>
+
+                        <p class="bigtfont" align="left">All these services are available to the member and immediate
+                            family including spouse, children, parents and parents-in-law.</p>
+                        <br>
+
+                        <h4 style="color:red; font-weight: bolder;" align="left">
+                            <bold>In case of traumatic event please contact: 0861 166 111 (Call centre number)</bold>
+                        </h4>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

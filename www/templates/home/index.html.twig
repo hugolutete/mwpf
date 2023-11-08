@@ -1,0 +1,468 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="pages">
+        <div data-page="index" class="page homepage">
+            <div class="page-content">
+
+                <div class="navbarpages">
+                    <div class="navbar_left">
+
+                    </div>
+                    <div class="navbar_right navbar_right_menu">
+                        <a href="#" data-panel="left" class="open-panel"><img
+                                    src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                    </div>
+                </div>
+
+                <!-- Slider -->
+                <div class="swiper-container slidertoolbar">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide" style="background-image:url({{ asset('images/slide1a.jpg') }});">
+                            <div class="slider_trans">
+                                <div class="slider-caption">
+                                    <br><br>
+
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="myvector">
+                                    <path fill="#b90f00" fill-opacity="1"
+                                          d="M0,192L18.5,213.3C36.9,235,74,277,111,256C147.7,235,185,149,222,133.3C258.5,117,295,171,332,197.3C369.2,224,406,224,443,192C480,160,517,96,554,101.3C590.8,107,628,181,665,197.3C701.5,213,738,171,775,176C812.3,181,849,235,886,229.3C923.1,224,960,160,997,133.3C1033.8,107,1071,117,1108,106.7C1144.6,96,1182,64,1218,69.3C1255.4,75,1292,117,1329,165.3C1366.2,213,1403,267,1422,293.3L1440,320L1440,0L1421.5,0C1403.1,0,1366,0,1329,0C1292.3,0,1255,0,1218,0C1181.5,0,1145,0,1108,0C1070.8,0,1034,0,997,0C960,0,923,0,886,0C849.2,0,812,0,775,0C738.5,0,702,0,665,0C627.7,0,591,0,554,0C516.9,0,480,0,443,0C406.2,0,369,0,332,0C295.4,0,258,0,222,0C184.6,0,148,0,111,0C73.8,0,37,0,18,0L0,0Z"></path>
+                                </svg>
+
+                                <br>
+                                <div class="container" align="center">
+                                    <a href="{{ path('app_home') }}"><img src="{{ asset('images/logo/logo.png') }}"
+                                                                          style="width:150px; margin-top: 30px"
+                                                                          img="responsive" alt=""></a>
+                                    <br>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="swiper-slide" style="background-image:url({{ asset('images/slide2a.jpg') }});">
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="swiper-container-toolbar swiper-toolbar">
+                    <div class="swiper-pagination-toolbar"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide toolbar-icon">
+
+                            <a href="{{ path('app_benefits') }}"><img src="{{ asset('images/icons/blue/music.png') }}"
+                                                                      alt="" title=""/><span>MEDIA </span></a>
+                            <a href="{{ path('app_products') }}"><img
+                                        src="{{ asset('images/icons/blue/features.png') }}" alt="" title=""/><span>PRODUCT</span></a>
+
+                            {% if app.user %}
+                                <a href="{{ path('app_profile') }}" data-popup="#user" class="open-popup"
+                                   id="loggedInx"><img src="{{ asset('images/icons/blue/userLogged.png') }}" alt=""
+                                                       title=""/><span>VIEW PROFILE</span></a>
+                            {% else %}
+                                <a href="#" data-popup=".popup-login" id='signin' class="open-popup"><img
+                                            src="{{ asset('images/icons/blue/lock.png') }}" alt="" title=""/><span>SIGN IN</span></a>
+                            {% endif %}
+                            <a href="{{ path('app_about') }}"><img src="{{ asset('images/icons/blue/users.png') }}"
+                                                                   alt="" title=""/><span>ABOUT MWPF</span></a>
+                            <a href="{{ path('app_employers') }}"><img
+                                        src="{{ asset('images/icons/blue/building.png') }}" alt="" title=""/><span>EMPLOYERS</span></a>
+                            <a href="{{ path('app_contact') }}"><img src="{{ asset('images/icons/blue/contact.png') }}"
+                                                                     alt="" title=""/><span>CONTACT US</span></a>
+                        </div>
+                        <div class="swiper-slide toolbar-icon">
+
+                            <a href="{{ asset('pdf/memberguide.pdf') }}" target="_blank"><img
+                                        src="{{ asset('images/icons/blue/blog.png') }}" alt=""
+                                        title=""/><span>GUIDE</span></a>
+                            <a href="{{ path('app_contact') }}" target="_blank"><img
+                                        src="{{ asset('images/icons/blue/categories.png') }}" alt="" title=""/><span>FUND RULE</span></a>
+                            <a href="{{ path('app_complaint') }}"><img src="{{ asset('images/icons/blue/logout.png') }}"
+                                                                       alt="" title=""/><span>COMPLAINTS</span></a>
+                            <a href="{{ path('app_videos') }}"><img src="{{ asset('images/icons/blue/video.png') }}"
+                                                                    alt="" title=""/><span>VIDEOS</span></a>
+                            <a href="#" data-popup=".popup-social" class="open-popup"><img
+                                        src="{{ asset('images/icons/blue/twitter.png') }}" alt="" title=""/><span>CONNECT</span></a>
+                            <a href="tel:0101003001"><img src="{{ asset('images/icons/blue/phone.png') }}" alt=""
+                                                          title=""/><span>CALL NOW!</span></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block popups %}
+    <!-- Login Popup -->
+    <!-- Login Popup -->
+    <div class="popup popup-login" id="loginSpace">
+        <div class="content-block">
+            <div class="container" align="center">
+                <a href="{{ path('app_home') }}"><img src="{{ asset('images/logo.png') }}"
+                                                      style="width:100px; margin-top: 30px" img="responsive" alt=""></a>
+                <br><br>
+            </div>
+            <h4>SIGN IN</h4>
+            <div class="loginform">
+                <form id="LoginForm" method="post" action="{{ path('app_login') }}">
+                    <input type="text" name="username" value="" id="username" class="form_input required"
+                           placeholder="username"/>
+                    <input type="password" name="password" id="password" value="" class="form_input required passInput"
+                           placeholder="password"/>
+
+                    <input type="checkbox" id="showPass">Show Password
+
+
+                    <div class="forgot_pass"><a href="#" data-popup=".popup-forgot" class="open-popup">Forgot
+                            Password?</a></div>
+                    <br>
+                    <div class="forgot_pass"><a href="#" data-popup=".popup-register" class="open-popup">Register</a>
+                    </div>
+                    <input type="submit" name="btnLogin" class="form_submit" onclick="show_loading()" id="loginButton"
+                           value="SIGN IN"/>
+
+                    <script>
+                        function show_loading() {
+                            document.getElementById("loginButton").value = "Loading .....";
+                        }
+                    </script>
+                </form>
+
+                <div class="signup_bottom">
+                    <p>By Signing in, I agree to the T&Cs </p><br>
+                    <a href="#" data-popup=".popup-terms" class="open-popup">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="close_popup_button">
+                <a href="#" class="close-popup" data-popup=".popup-login"><img
+                            src="{{ asset('images/icons/black/menu_close.png') }}" alt="" title=""/></a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Login Popup -->
+    <div class="popup popup-register" id="registerSpace">
+        <div class="content-block">
+            <div class="container" align="center">
+                <a href="{{ path('app_home') }}"><img src="{{ asset('images/logo.png') }}"
+                                                      style="width:100px; margin-top: 30px" img="responsive" alt=""></a>
+                <br><br>
+            </div>
+            <h4>SIGN UP</h4>
+            <div class="loginform">
+                <form id="RegisterForm" method="post">
+                    <input type="text" name="RegisterForm__surname" id="RegisterForm__surname" class="form_input"
+                           placeholder="Surname" required/>
+                    <input type="text" name="RegisterForm__industryNo" value="" id="RegisterForm__industryNo"
+                           class="form_input"
+                           placeholder="Industry No or Member Number " required/>
+                    <input type="text" name="RegisterForm__mobile" value="" id="RegisterForm__mobile" class="form_input"
+                           placeholder="Mobile Number E.g 073......" required/>
+                    <select class="form_control" id="form__selectQuestion" style="display: none;"
+                            name="form__selectQuestion"></select>
+                    <br> <br>
+
+                    <input type="button" class="form_submit" id="btnRegisterMember" value="SIGN UP"/>
+
+                    <script>
+
+                        function register_loading() {
+                            document.getElementById("btnRegisterMember").value = "Loading .....";
+                        }
+                    </script>
+
+                    <input type="button" name="form__btnProceed" style="display: none;" class="form_submit"
+                           id="form__btnProceed"
+                           value="PROCEED"/>
+                </form>
+
+            </div>
+            <div class="close_popup_button">
+                <a href="#" class="close-popup" data-popup=".popup-register"><img
+                            src="{{ asset('images/icons/black/menu_close.png') }}" alt="" title=""/></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Popup -->
+    <div class="popup popup-forgot">
+        <div class="content-block">
+            <div class="container" align="center">
+                <a href="{{ path('app_home') }}"><img src="{{ asset('images/logo.png') }}"
+                                                      style="width:100px; margin-top: 30px" img="responsive" alt=""></a>
+                <br><br>
+            </div>
+            <h4>FORGOT PASSWORD</h4>
+            <div class="loginform">
+                <form id="ForgotForm" method="post">
+                    <input type="text" name="forgotPassword__username" id="forgotPassword__username"
+                           class="form_input required" placeholder="Username" required/>
+                    <input type="button" name="forgotPasswordButton" class="form_submit" id="forgotPasswordButton"
+                           value="RESEND PASSWORD"/>
+                </form>
+                <div class="signup_bottom">
+                    <!-- <p>An SMS will be sent to you shortly.</p> -->
+                </div>
+            </div>
+            <div class="close_popup_button">
+                <a href="#" class="close-popup" data-popup=".popup-forgot"><img
+                            src="{{ asset('images/icons/black/menu_close.png') }}" alt="" title=""/></a>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const forgotPasswordButton = document.getElementById('forgotPasswordButton');
+
+            forgotPasswordButton.addEventListener('click', function () {
+                const usernameElement = document.getElementById('forgotPassword__username');
+
+                const initialValue = forgotPasswordButton.value;
+                const username = String(usernameElement.value).trim().valueOf();
+
+                forgotPasswordButton.value = 'Submitting...';
+
+                if (!username) {
+                    Swal.fire({
+                        text: "Enter your username",
+                        icon: "warning",
+                    });
+                    return;
+                }
+
+                fetch("{{ path('api_forgot_password') }}", {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        username: username,
+                    })
+                })
+                    .then(response => response.json())
+                    .then(message => {
+                        Swal.fire({
+                            text: String(message).valueOf(),
+                            icon: "success",
+                        });
+                    })
+                    .catch(err => {
+                        console.log(err.message)
+
+                        Swal.fire({
+                            text: err.message,
+                            icon: "warning",
+                        });
+                    })
+                    .finally(() => {
+                        forgotPasswordButton.value = initialValue;
+                        usernameElement.value = "";
+                    });
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const registerButton = document.getElementById('btnRegisterMember');
+            const proceedButton = document.getElementById('form__btnProceed');
+
+            const surnameElement = document.getElementById('RegisterForm__surname');
+            const industryNoElement = document.getElementById('RegisterForm__industryNo');
+            const mobileElement = document.getElementById('RegisterForm__mobile');
+            const industryDropdown = document.getElementById('form__selectQuestion');
+
+            const registerButtonInitialText = registerButton.value;
+
+            const getRegisterFormData = () => {
+                const surname = String(surnameElement.value).trim().valueOf();
+                const industryNumber = String(industryNoElement.value).trim().valueOf();
+                const mobile = String(mobileElement.value).trim().valueOf();
+                const industryIndex = industryDropdown.selectedIndex;
+
+                const validate = (checkIndustrySelection = false) => {
+                    if (!surname) {
+                        Swal.fire({
+                            text: 'Provide your surname',
+                            icon: "warning",
+                        });
+                        return false;
+                    }
+
+                    if (!industryNumber) {
+                        Swal.fire({
+                            text: 'Provide your industry number',
+                            icon: "warning",
+                        });
+                        return false;
+                    }
+
+                    if (!mobile) {
+                        Swal.fire({
+                            text: 'Provide your mobile number',
+                            icon: "warning",
+                        });
+                        return false;
+                    }
+
+                    if (checkIndustrySelection && industryIndex <= 0) {
+                        Swal.fire({
+                            text: 'Select your the company you worked for',
+                            icon: "warning",
+                        });
+                        return false;
+                    }
+
+                    return true;
+                };
+
+                return {surname, industryNumber, mobile, industryIndex, validate};
+            };
+
+            registerButton.addEventListener('click', function () {
+
+                const {surname, industryNumber, mobile, validate} = getRegisterFormData();
+
+                if (!validate(false)) {
+                    return;
+                }
+
+                registerButton.value = 'Validating...';
+                registerButton.disabled = true;
+
+                fetch("{{ path('api_verify_member') }}", {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        LookUpValue: industryNumber,
+                        Surname: surname,
+                        Cellphone: mobile,
+                    }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                    .then(async (response) => {
+                        if (response.ok) {
+                            return response.json();
+                        }
+
+                        throw Error(await response.text());
+                    })
+                    .then(data => {
+                        industryDropdown.style.display = "block";
+
+                        // clear dropdown
+                        industryDropdown.innerHTML = '';
+
+                        industryDropdown.append(new Option('Please select the company you worked for', '#'));
+
+                        Array.from(data.clients).forEach(function (client) {
+                            industryDropdown.append(new Option(client['Key'], client['Value']));
+                        });
+
+                        // toggle submit buttons
+                        proceedButton.style.display = "block";
+                        registerButton.style.display = "none";
+
+                        return data;
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        Swal.fire({
+                            text: err?.message || "An error occurred",
+                            icon: "warning",
+                        });
+
+                        registerButton.value = registerButtonInitialText;
+                        registerButton.disabled = false;
+                    })
+                    .finally(() => {
+                        registerButton.value = registerButtonInitialText;
+                        registerButton.disabled = false;
+                    });
+            });
+
+            industryDropdown.addEventListener('change', function () {
+                if (this.value === '#') {
+                    return;
+                }
+
+                if (industryDropdown.selectedIndex === -1) {
+                    return;
+                }
+
+                let message = `${industryDropdown.options[industryDropdown.selectedIndex].text}: ${this.value}`;
+
+                if (this.value === "false") {
+                    message += " **You are NOT a member**";
+                }
+
+                alert(message);
+
+                if (this.value === "false") {
+                    industryDropdown.selectedIndex = 0; // this option doesn't do anything on the server and is not validated at all
+                    // option added to make client happy
+                }
+            });
+
+            proceedButton.addEventListener('click', function () {
+                const {industryNumber, surname, mobile, validate} = getRegisterFormData();
+
+                if (!validate(true)) {
+                    return;
+                }
+
+                fetch("{{ path('api_register') }}", {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        LookUpValue: industryNumber,
+                        Surname: surname,
+                        Cellphone: mobile,
+                    }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                })
+                    .then(async (response) => {
+                        if (response.ok) {
+                            return response.json();
+                        }
+
+                        throw Error(await response.text());
+                    })
+                    .then(data => {
+                        Swal.fire({
+                            text: "Success",
+                            icon: "success",
+                        });
+
+                        console.log({data});
+
+                        window.location = "{{ url('app_home') }}";
+
+                        return data;
+                    })
+                    .catch(err => {
+                        console.log(err);
+                        Swal.fire({
+                            text: err?.message || "An error occurred",
+                            icon: "warning",
+                        });
+                    })
+                    .finally(() => {
+                        registerButton.value = registerButtonInitialText;
+                        registerButton.disabled = false;
+                    });
+            });
+        });
+    </script>
+{% endblock %}

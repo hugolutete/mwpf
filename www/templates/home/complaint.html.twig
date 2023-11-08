@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="pages">
+        <div data-page="contact" class="page no-toolbar no-navbar">
+            <div class="page-content">
+
+                <div class="navbarpages navbarpagesbg">
+                    <div class="navbar_left">
+                        <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                              style="width:25px" title=""/></a>
+                    </div>
+                    <div class="navbar_right navbar_right_menu">
+                        <a href="#" data-panel="left" class="open-panel"><img
+                                    src="{{ asset('images/icons/white/home.png') }}" alt="" title=""/></a>
+                    </div>
+
+                </div>
+
+                <div id="pages_maincontent">
+
+                    <h2 class="page_title">LOG A COMPLAINT</h2>
+                    <div class="swiper-container-pages">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/mwpfslider5.jpg') }}" alt="" title=""/>
+                            </div>
+                         
+                        </div>
+                 
+                    </div>
+                    <div class="page_single layout_fullwidth_padding">
+
+                        <h2 id="Note"></h2>
+                        <div class="contactform">
+                            <form class="" id="ContactForm" method="post" action="">
+                                <label>Name & Surname:</label>
+                                <input type="text" name="ContactName" id="ContactName" value=""
+                                       class="form_input required"/>
+                                <label>Email:</label>
+                                <input type="text" name="ContactEmail" id="ContactEmail" value=""
+                                       class="form_input required email"/>
+                                <label>Phone Number:</label>
+                                <input type="phone" name="telephone" id="telephone" value=""
+                                       class="form_input required "/>
+                                <label>Complaint Subject:</label>
+                                <input type="text" name="subject" id="subject" value="" class="form_input required "/>
+                                <label>Message:</label>
+                                <textarea name="ContactComment" id="ContactComment"
+                                          class="form_textarea textarea required" rows="" cols=""></textarea>
+                                <input type="submit" name="submit" class="form_submit" id="submit" value="Send"/>
+                                <input class="" type="hidden" name="to" value="youremail@yourwebsite.com"/>
+                                <input class="" type="hidden" name="subject" value="Contacf form message"/>
+                                <label id="loader" style="display:none;"><img src="{{ asset('images/loader.gif') }}"
+                                                                              alt="Loading..."
+                                                                              id="LoadingGraphic"/></label>
+                            </form>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

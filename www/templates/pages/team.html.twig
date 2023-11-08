@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TeamController!{% endblock %}
+
+{% block body %}
+    <div data-page="team" class="page no-toolbar no-navbar">
+        <div class="page-content">
+
+            <div class="navbarpages navbarpagesbg">
+                <div class="navbar_left">
+                    <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                          style="width:25px" title=""/></a>
+                </div>
+                <div class="navbar_right navbar_right_menu">
+                    <a href="#" data-panel="left" class="open-panel"><img
+                                src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                </div>
+
+            </div>
+
+            <div id="pages_maincontent">
+
+                <h2 class="page_title">MWPF EXECUTIVE MANAGEMENT</h2>
+                <div class="page_single layout_fullwidth_padding">
+                    <div class="swiper-container-teambigger">
+
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide team-block">
+                                <a href="{{ path('app_about') }}" data-view=".view-main"><img
+                                            src="{{ asset('images/management/newpo.jpg') }}" alt="" title=""/></a>
+                                <strong>Frans Phakgadi </strong>
+
+                                <span>PO & Acting CEO </span>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination-teambigger"></div>
+                    </div>
+
+                </div>
+
+                <div class="page_single layout_fullwidth_padding">
+
+                    <div class="swiper-container-team">
+
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide team-block">
+                                <a href="{{ path('app_about') }}" data-view=".view-main"><img
+                                            src="{{ asset('images/management/cfo.jpg') }}" alt="" title=""/></a><strong>Amma
+                                    Amparbeng - CFO </strong><span>Chief Financial Officer</span>
+                            </div>
+                            <div class="swiper-slide team-block">
+                                <a href="{{ path('app_about') }}" data-view=".view-main"><img
+                                            src="{{ asset('images/management/IMG_1778-300x200.jpg') }}" alt=""
+                                            title=""/></a><strong>Lungelo Solombela - HRE</strong><span>Human Resources Executive</span>
+                            </div>
+
+                            <div class="swiper-slide team-block">
+                                <a href="{{ path('app_about') }}" data-view=".view-main"><img
+                                            src="{{ asset('images/management/bus.jpg') }}" alt="" title=""/></a><strong>Muziwandile
+                                    Ndlovu - BDE</strong><span>Business Development Executive</span>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination-team"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

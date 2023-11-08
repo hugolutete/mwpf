@@ -1,0 +1,312 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div data-page="blog" class="page no-toolbar no-navbar">
+        <div class="page-content">
+
+            <div class="navbarpages navbarpagesbg">
+                <div class="navbar_left">
+                    <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                          style="width:25px" title=""/></a>
+                </div>
+                <div class="navbar_right navbar_right_menu">
+                    <a href="#" data-panel="left" class="open-panel"><img
+                                src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                </div>
+
+            </div>
+
+            <div id="pages_maincontent">
+
+                <h2 class="page_title">MWPF PRODUCTS</h2>
+                 <div class="swiper-container-pages">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="{{ asset('images/mwpfslider5.jpg') }}" alt="" title=""/>
+                        </div>
+                      
+                        
+                    </div>
+
+                  
+                </div>
+                <div class="page_single layout_fullwidth_padding">
+
+
+                    <ul class="posts">
+                        <li class="swipeout">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swipeout-content item-content">
+                                    <div class="post_entry">
+                                        <div class="post_thumb"><img src="{{ asset('images/coffin.png') }}" alt=""
+                                                                     title=""/></div>
+                                        <div class="post_details">
+                                            <div class="post_category"><a href="{{ path('app_death') }}">Death
+                                                    Benefit</a></div>
+                                            <h2><a href="{{ path('app_death') }}">Should you die, your next of kin or
+                                                    spouse must report your death to your employer’s H.R. office.</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post_swipe"><img src="{{ asset('images/swipe_more.png') }}" alt=""
+                                                                     title=""/></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swipeout-actions-right">
+                                    <a href="{{ path('app_death') }}" class="action1"><img
+                                                src="{{ asset('images/icons/black/message.png') }}" alt=""
+                                                title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/black/like.png') }}" alt="" title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/white/contact.png') }}" alt=""
+                                                title=""/></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swipeout">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swipeout-content item-content">
+                                    <div class="post_entry">
+                                        <div class="post_thumb"><img src="{{ asset('images/disabled.png') }}" alt=""
+                                                                     title=""/></div>
+                                        <div class="post_details">
+                                            <div class="post_category"><a href="{{ path('app_disability') }}">Disability
+                                                    Benefit</a></div>
+                                            <h2><a href="{{ path('app_disability') }}">You are permanently unfit to
+                                                    continue in or resume employment in the category of work...</a></h2>
+                                        </div>
+                                        <div class="post_swipe"><img src="{{ asset('images/swipe_more.png') }}" alt=""
+                                                                     title=""/></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swipeout-actions-right">
+                                    <a href="{{ path('app_disability') }}" class="action1"><img
+                                                src="{{ asset('images/icons/black/message.png') }}" alt=""
+                                                title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/black/like.png') }}" alt="" title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/white/contact.png') }}" alt=""
+                                                title=""/></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swipeout">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swipeout-content item-content">
+                                    <div class="post_entry">
+                                        <div class="post_thumb"><img src="{{ asset('images/annuity.png') }}" alt=""
+                                                                     title=""/></div>
+                                        <div class="post_details">
+                                            <div class="post_category"><a href="{{ path('app_annuity') }}">Income for
+                                                    Life</a></div>
+                                            <h2><a href="{{ path('app_annuity') }}">You "buy" the product with your fund
+                                                    credit and receive a guaranteed monthly for life...</a></h2>
+                                        </div>
+                                        <div class="post_swipe"><img src="{{ asset('images/swipe_more.png') }}" alt=""
+                                                                     title=""/></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swipeout-actions-right">
+                                    <a href="{{ path('app_annuity') }}" class="action1"><img
+                                                src="{{ asset('images/icons/black/message.png') }}" alt=""
+                                                title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/black/like.png') }}" alt="" title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/white/contact.png') }}" alt=""
+                                                title=""/></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swipeout">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swipeout-content item-content">
+                                    <div class="post_entry">
+                                        <div class="post_thumb"><img src="{{ asset('images/clinic.png') }}" alt=""
+                                                                     title=""/></div>
+                                        <div class="post_details">
+                                            <div class="post_category"><a href="{{ path('app_funeral') }}">Funeral
+                                                    Benefit</a></div>
+                                            <h2><a href="{{ path('app_funeral') }}">A funeral benefit is payable in the
+                                                    event of the death of a member, spouse or a child...</a></h2>
+                                        </div>
+                                        <div class="post_swipe"><img src="{{ asset('images/swipe_more.png') }}" alt=""
+                                                                     title=""/></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swipeout-actions-right">
+                                    <a href="{{ path('app_funeral') }}" class="action1"><img
+                                                src="{{ asset('images/icons/black/message.png') }}" alt=""
+                                                title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/black/like.png') }}" alt="" title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/white/contact.png') }}" alt=""
+                                                title=""/></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swipeout">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swipeout-content item-content">
+                                    <div class="post_entry">
+                                        <div class="post_thumb"><img src="{{ asset('images/disabled3.png') }}" alt=""
+                                                                     title=""/></div>
+                                        <div class="post_details">
+                                            <div class="post_category"><a href="{{ path('app_retirement') }}">Retirement
+                                                    Benefit</a></div>
+                                            <h2><a href="{{ path('app_retirement') }}">For most people retirement is a
+                                                    major event in their lives, while some may dread the prospect...</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post_swipe"><img src="{{ asset('images/swipe_more.png') }}" alt=""
+                                                                     title=""/></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swipeout-actions-right">
+                                    <a href="{{ path('app_retirement') }}" class="action1"><img
+                                                src="{{ asset('images/icons/black/message.png') }}" alt=""
+                                                title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/black/like.png') }}" alt="" title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/white/contact.png') }}" alt=""
+                                                title=""/></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swipeout">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swipeout-content item-content">
+                                    <div class="post_entry">
+                                        <div class="post_thumb"><img src="{{ asset('images/dissmissed.png') }}" alt=""
+                                                                     title=""/></div>
+                                        <div class="post_details">
+                                            <div class="post_category"><a href="{{ path('app_retrenchment') }}">Retrenchment
+                                                    / Resignation</a></div>
+                                            <h2><a href="{{ path('app_retrenchment') }}">Should you resign or be
+                                                    dismissed, you my chose to receive a lump sum equal to your Fund
+                                                    Credit.</a></h2>
+                                        </div>
+                                        <div class="post_swipe"><img src="{{ asset('images/swipe_more.png') }}" alt=""
+                                                                     title=""/></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swipeout-actions-right">
+                                    <a href="{{ path('app_retrenchment') }}" class="action1"><img
+                                                src="{{ asset('images/icons/black/message.png') }}" alt=""
+                                                title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/black/like.png') }}" alt="" title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/white/contact.png') }}" alt=""
+                                                title=""/></a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="swipeout">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swipeout-content item-content">
+                                    <div class="post_entry">
+                                        <div class="post_thumb"><img src="{{ asset('images/docs.png') }}" alt=""
+                                                                     title=""/></div>
+                                        <div class="post_details">
+                                            <div class="post_category"><a
+                                                        href="{{ asset('pdf/defaultregulations.pdf') }}"
+                                                        target="_blank">Default Regulations</a></div>
+                                            <h2><a href="{{ asset('pdf/defaultregulations.pdf') }}" target="_blank">They
+                                                    aim to improve the outcomes for members by ensuring that they get
+                                                    good value for...</a></h2>
+                                        </div>
+                                        <div class="post_swipe"><img src="{{ asset('images/swipe_more.png') }}" alt=""
+                                                                     title=""/></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swipeout-actions-right">
+                                    <a href="{{ asset('pdf/defaultregulations.pdf') }}" target="_blank" class="action1"><img
+                                                src="{{ asset('images/icons/black/message.png') }}" alt=""
+                                                title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/black/like.png') }}" alt="" title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/white/contact.png') }}" alt=""
+                                                title=""/></a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="swipeout">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swipeout-content item-content">
+                                    <div class="post_entry">
+                                        <div class="post_thumb"><img src="{{ asset('images/support.png') }}" alt=""
+                                                                     title=""/></div>
+                                        <div class="post_details">
+                                            <div class="post_category"><a href="{{ path('app_housing') }}">Housing
+                                                    Loan</a></div>
+                                            <h2><a href="{{ path('app_housing') }}">We provide Pension-Backed
+                                                    Loans through iMas and FNB...</a></h2>
+                                        </div>
+                                        <div class="post_swipe"><img src="{{ asset('images/swipe_more.png') }}" alt=""
+                                                                     title=""/></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swipeout-actions-right">
+                                    <a href="{{ path('app_masibambisane') }}" class="action1"><img
+                                                src="{{ asset('images/icons/black/message.png') }}" alt=""
+                                                title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/black/like.png') }}" alt="" title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/white/contact.png') }}" alt=""
+                                                title=""/></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swipeout">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swipeout-content item-content">
+                                    <div class="post_entry">
+                                        <div class="post_thumb"><img src="{{ asset('images/support.png') }}" alt=""
+                                                                     title=""/></div>
+                                        <div class="post_details">
+                                            <div class="post_category"><a href="{{ path('app_masibambisane') }}">Retirement
+                                                    Benefit Counseling </a></div>
+                                            <h2><a href="{{ path('app_masibambisane') }}">The Rewards Programme provides
+                                                    members and their families access to savings and specials...</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post_swipe"><img src="{{ asset('images/swipe_more.png') }}" alt=""
+                                                                     title=""/></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swipeout-actions-right">
+                                    <a href="{{ path('app_masibambisane') }}" class="action1"><img
+                                                src="{{ asset('images/icons/black/message.png') }}" alt=""
+                                                title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/black/like.png') }}" alt="" title=""/></a>
+                                    <a href="#" class="action1 open-popup" data-popup=".popup-social"><img
+                                                src="{{ asset('images/icons/white/contact.png') }}" alt=""
+                                                title=""/></a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                    <div id="loadMore">LOAD MORE</div>
+                    <div id="showLess">END</div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

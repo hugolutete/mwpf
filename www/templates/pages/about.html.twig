@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div data-page="about" class="page no-toolbar no-navbar">
+        <div class="page-content">
+
+            <div class="navbarpages navbarpagesbg">
+                <div class="navbar_left">
+                    <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                          style="width:25px" title=""/></a>
+                </div>
+                <div class="navbar_right navbar_right_menu">
+                    <a href="#" data-panel="left" class="open-panel"><img
+                                src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                </div>
+
+            </div>
+
+            <div id="pages_maincontent">
+
+                <h2 class="page_title">ABOUT MINEWORKERS PROVIDENT FUND</h2>
+                <!-- Slider -->
+               <div class="swiper-container-pages">
+                    <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/mwpfslider5.jpg') }}" alt="" title=""/>
+                            </div>
+                         
+                        </div>
+                 
+                    </div>
+
+                <div class="page_single layout_fullwidth_padding">
+
+                    <blockquote align="justify">
+                        The Mineworkers Provident Fund (MWPF) was formed in 1989, with a clearly defined vision and
+                        strategic objectives which include being the retirement fund of choice in the mining industry
+                        but most importantly providing retirement benefits to the most vulnerable workers of our society
+                        – the mineworkers. Our core values as a Fund are respect, Dignity and Legacy where we are driven
+                        by our desire to leave something of value for the next generations. This is based on the notion
+                        that just like other workers, mineworkers have the right to retire with dignity thus accounting
+                        for all the years of hard labour they put in.
+                    </blockquote>
+
+                    <div class="page_single layout_fullwidth_padding">
+                        <div class="toggle">
+                            <div class="toggle__item">
+                                <input class="toggle__input" id="togg1" type="checkbox" name="toggle">
+                                <label class="toggle__label" for="togg1">MISSION <span></span></label>
+                                <div class="toggle__content">
+                                    <p>Our mission is to provide superior service to members and their
+                                        beneficiaries.</p>
+                                </div>
+                            </div>
+                            <div class="toggle__item">
+                                <input class="toggle__input" id="togg2" type="checkbox" name="toggle">
+                                <label class="toggle__label" for="togg2">VISION <span></span></label>
+                                <div class="toggle__content">
+                                    <p>To be the Retirement Fund of Choice in the mining industry.</p>
+                                </div>
+                            </div>
+                            <div class="toggle__item">
+                                <input class="toggle__input" id="togg3" type="checkbox" name="toggle">
+                                <label class="toggle__label" for="togg3">VALUES<span></span></label>
+                                <div class="toggle__content">
+                                    <ul class="simple_list">
+                                        <li>Respect</li>
+                                        <li>Dignity</li>
+                                        <li>Legacy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="button_full btyellow">REGULATORY BODIES</a>
+                    <ul class="features_list">
+                        <li><img src="{{ asset('images/employers/fsb_logo.png') }}" alt="" title=""/><span>FINANCIAL SECTOR CONDUCT AUTHORITY</span>
+                        </li>
+                        <li><img src="{{ asset('images/employers/chamber_logo.png') }}" alt="" title=""/><span>MINERALS COUNCIL SOUTH AFRICA</span>
+                        </li>
+                        <li><img src="{{ asset('images/employers/pfa_logo.png') }}" alt="" title=""/><span>PENSION FUND ADJUDICATOR</span>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="button_full btgray">THE FUND MANAGEMENT</a>
+                    <br>
+                    <ul class="simple_list">
+                        <li>BOARD OF TRUSTEES</li>
+                        <li>REGIONAL ADVISORY COMMITTEES (RAC)</li>
+                        <li>THE EXECUTIVE COMMITEE</li>
+                        <li>SUB-COMMITEES</li>
+                    </ul>
+
+                    <a href="{{ path('app_team') }}" class="button_full btyellow ">MWPF EXECUTIVE MANAGEMENT</a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}

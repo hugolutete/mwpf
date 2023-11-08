@@ -1,0 +1,181 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="pages">
+        <div data-page="blogsingle" class="page no-toolbar no-navbar">
+            <div class="page-content">
+
+                <div class="navbarpages navbarpagesbg">
+                    <div class="navbar_left">
+                        <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                              style="width:25px" title=""/></a>
+                    </div>
+                    <div class="navbar_right navbar_right_menu">
+                        <a href="#" data-panel="left" class="open-panel"><img
+                                    src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                    </div>
+
+                </div>
+
+                <div id="pages_maincontent">
+
+                    <a href="{{ path('app_products') }}" class="backto"><img
+                                src="{{ asset('images/icons/black/back.png') }}" alt="" title=""/></a>
+                    <h2 class="blog_title">Housing Loans</h2>
+                    <!-- Slider -->
+                    <div class="swiper-container-pages">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide13.jpg') }}" alt="" title=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide12.jpg') }}" alt="" title=""/>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/slide14.jpg') }}" alt="" title=""/>
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <div class="page_single layout_fullwidth_padding">
+                        <div class="post_single">
+                            <h5 style="color:red" class="">Housing Loans through iMas Finance or FNB</h5>
+                            <p class="bigtfont" align="left">We provide Pension-Backed Loans through iMas and FNB. The loans are subject to approval by the credit provider and must be used for housing purposes. </p>
+                            </p>
+                            <h5 style="color:red" class="">What is a Pension-Backed Loan?</h5>
+                             <p class="bigtfont" align="left">A Pension-Backed Loan is a Home Loan dependent on an agreement between both the employer and the Provident Fund.  </p>
+                            </p>
+                             <p class="bigtfont" align="left">A Pension Backed Loan is a loan where your Provident Fund is used as security to:  </p>
+                            </p>
+                            <ul>
+                                <li>  Buy Vacant Land </li>
+                                 <li>  Build a new house </li>
+                                 <li>   Renovate your house </li>
+                                  <li>  Use as a deposit or bond registration fee </li>
+                             </ul>
+
+                            <a href="#" data-popup=".popup-social" class="button_full btmint open-popup">Share this
+                                product</a>
+                        </div>
+
+                        <h3 style="color:#000000" class="alileft">IMAS:</h3>
+                      
+
+                        <h3 style="color:red" class="alileft">Housing Loans through iMas Finance :</h3>
+                        
+                        <li class="bigtfont" ; align="left">The loans must be settled by normal retirement age, as per the Fund rules.
+                        </li>
+                        <li class="bigtfont" ; align="left">Credit life insurance covers you for temporary and permanent disability, death, and retrenchment cover. Ensuring that your family is secure in the event of unforeseen circumstances.
+                        </li>
+                      <h3 style="color:red" class="alileft">Documents Required :</h3>
+                        <li class="bigtfont" ; align="left">Offer to Purchase (OTP)
+                        </li>
+                        <li class="bigtfont" ; align="left">Income tax statement/IRP5 document
+                        </li>
+                        <li class="bigtfont" ; align="left">I.D or smart card copy
+                        </li>
+                        <li class="bigtfont" ; align="left">Proof of residential address (e.g. Municipal or rates bill)
+                        </li>
+                        <li class="bigtfont" ; align="left">The members latest 3 (three) months payslips or bank statement
+                        </li>
+                        
+                        <br>
+
+
+                        <h4 style="color:red" align="left">Contact Details:</h4>
+
+                        <li class="bigtfont" ; align="left">E-mail: loans@imasfinance.co.za</li>
+                        <li class="bigtfont" ; align="left">Whatsapp: 087 240 5626</li>
+                        <li class="bigtfont" ; align="left">Phone: 0861 043 627</li>
+                    
+                    <br><br>
+                       
+                        <h3 style="color:#000000" class="alileft">FNB:</h3>
+                         <h3 style="color:red" class="alileft">Housing Loans through FNB:</h3>
+                        
+                       <p class="bigtfont" align="left">The FNB Pension Backed Loans are secured against the member’s fund value. You may qualify for the loan if you are a member of the fund, as there is an agreement in place between FNB, the fund, the fund administrator, and the employer.  </P>
+
+                      
+                        <h4 style="color:red" align="left">Note:</h4>
+                        <li class="bigtfont" ; align="left">The home must be the primary residence of the applicant or their dependent(s).
+                        </li>
+                        <li class="bigtfont" ; align="left">The property must be within the borders of South Africa.
+                        </li>
+                        <li class="bigtfont" ; align="left">You will also be required to declare your ‘Registration Tax number’ for SA or any other country where you hold citizenship or residency.
+                        </li>
+                        
+                      <h3 style="color:red" class="alileft">Pension Backed Loan rules :</h3>
+                        <li class="bigtfont" ; align="left">You must be over the age of 18 years
+                        </li>
+                        <li class="bigtfont" ; align="left">The minimum amount you can apply for is R5 000
+                        </li>
+                        <li class="bigtfont" ; align="left">The maximum loan amount is ‘as per the fund rules’
+                        </li>
+                        <li class="bigtfont" ; align="left">The minimum loan term is 12 months
+                        </li>
+                        <li class="bigtfont" ; align="left">The maximum loan term is 240 months (20 years)
+                        </li>
+                        <li class="bigtfont" ; align="left">All loans are governed by the National Credit Act and the FNB
+                        </li>
+                        <li class="bigtfont" ; align="left">Credit Policy and therefore normal credit scoring and affordability rules apply
+                        </li>
+                        
+                        <br>
+                        <h3 style="color:red" class="alileft">Risk Benefit Cover :</h3>
+                       <p class="bigtfont" align="left">Members receive cover in the following instances; the cover is for the full loan amount and excludes arrears (if applicable): </p>
+                       
+                        <li class="bigtfont" ; align="left">Death – Settles outstanding balance at the time of death.
+                        </li>
+                        <li class="bigtfont" ; align="left">Permanent disability – Settles outstanding balance at the time of permanent disability.The minimum amount you can apply for is R5 000
+                        </li>
+                        <li class="bigtfont" ; align="left">Temporary disability – 12 months’ instalments paid.
+                        </li>
+                        <li class="bigtfont" ; align="left">Unemployed or unable to earn an income – 12 months’ instalments paid.
+                        </li>
+                        
+                        <br>
+                        <h3 style="color:red" class="alileft">Documents Required :</h3>
+                        <li class="bigtfont" ; align="left">Certified South African green bar-coded Identity Document or Smart ID Card (front and back)
+                        </li>
+                        <li class="bigtfont" ; align="left">Certified copy of Marriage Certificate
+                        </li>
+                        <li class="bigtfont" ; align="left">Latest pay slips (12 consecutive for weekly paid, 6 consecutive fortnightly paid, 3 consecutive for monthly paid).
+                        </li>
+                        <li class="bigtfont" ; align="left">Valid building quotation or Offer to Purchase (not older than 1 month)
+                        </li>
+                        <li class="bigtfont" ; align="left">The latest proof of residence (not older than three months)
+                        </li>
+                        <li class="bigtfont" ; align="left"> Latest 3 months stamped bank statement (if not banking with FNB)
+                        </li>
+                        <li class="bigtfont" ; align="left"> A settlement letter if an existing pension backed housing loan with another institution is being switched or if you want to settle your bond.
+   
+                        </li>
+                        <li class="bigtfont" ; align="left"> Latest fund benefit statement.
+   
+                        </li>
+                          <br>
+                        <h3 style="color:red" class="alileft">Application process:</h3>
+                        <li class="bigtfont" ; align="left">Member must check with HR if the company has signed the agreement. If not, HR must contact the fund.
+                        </li>
+                        <li class="bigtfont" ; align="left">If the company has signed, members must request an application form from HR/FNB by calling 087 736 6000 or SMS “Home” to 30752 (free SMS).
+                        </li>
+                        <li class="bigtfont" ; align="left">Request a benefit statement from the Fund.
+                        </li>
+                        <li class="bigtfont" ; align="left">Complete the application form and attach all required supporting documents.
+                        </li>
+                        <li class="bigtfont" ; align="left">Documents number must be emailed to smarthousingplandocs@fnb.co.za
+                        </li>
+                        <li class="bigtfont" ; align="left"> Contact 087 736 6000 for application statuses or disputes.
+                        </li>           
+                        <br>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

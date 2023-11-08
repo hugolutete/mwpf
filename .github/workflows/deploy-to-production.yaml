@@ -1,0 +1,31 @@
+name: Deploy
+run-name: ${{ github.actor }} is deploying to production via GitHub Actions 🚀
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Deploy-to-Production:
+    name: Deploy-to-Production
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploying to ${{ secrets.HOST }}
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.MWPF_SECRET }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /var/www/mwpf.co.za
+            git pull origin main
+            cd www
+            export COMPOSER_ALLOW_SUPERUSER=1
+            rm -rf var/ vendor/
+            mkdir var/ vendor/
+            symfony composer install
+            symfony composer dump-autoload -o
+            symfony console doctrine:migration:migrate -n
+            chmod -R 0777 var/
+            chmod -R 0755 vendor/
+

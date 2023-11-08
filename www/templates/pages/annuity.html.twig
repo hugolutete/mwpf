@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="pages">
+        <div data-page="blogsingle" class="page no-toolbar no-navbar">
+            <div class="page-content">
+
+                <div class="navbarpages navbarpagesbg">
+                    <div class="navbar_left">
+                        <a href="{{ path('app_home') }}"><img src="{{ asset('images/icons/white/home.png') }}" alt=""
+                                                              style="width:25px" title=""/></a>
+                    </div>
+                    <div class="navbar_right navbar_right_menu">
+                        <a href="#" data-panel="left" class="open-panel"><img
+                                    src="{{ asset('images/icons/white/menu.png') }}" alt="" title=""/></a>
+                    </div>
+
+                </div>
+
+                <div id="pages_maincontent">
+
+                    <a href="{{ path('app_products') }}" class="backto"><img
+                                src="{{ asset('images/icons/black/back.png') }}" alt="" title=""/></a>
+                    <h2 class="blog_title">Annuity Benefit</h2>
+                    <!-- Slider -->
+                    <div class="swiper-container-pages">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="{{ asset('images/mwpfslider5.jpg') }}" alt="" title=""/>
+                            </div>
+                         
+                        </div>
+                 
+                    </div>
+
+                    <div class="page_single layout_fullwidth_padding">
+                        <div class="post_single">
+                            <h5><strong style="color: red"> THIS IS HOW IT WORKS</strong></h5>
+
+                            <p class="bigtfont; alileft" style="color: red"><strong class="all caps">You can use all
+                                    your fund credit to buy our income for life.</strong><br><br>
+                                <li class="bigtfont" ; align="left"> You "buy" the product with your fund credit and, in
+                                    return, receive a guaranteed monthly rand amount of your life.
+                                </li>
+                                <li class="bigtfont" ; align="left"> A large portion of the monye os invested which
+                                    provide the steady guaranteed part of your income for life.
+                                </li>
+                                <li class="bigtfont" ; align="left"> Your guaranteed income for life will rise in
+                                    linewith bonuses declared (usually annually); these are based on the investment
+                                    returns
+                                </li>
+                                <br>
+
+
+                                <a href="#" data-popup=".popup-social" class="button_full btmint open-popup">Share this
+                                    product</a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

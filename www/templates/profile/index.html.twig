@@ -1,0 +1,422 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="pages">
+        <div data-page="toggle" class="page no-toolbar no-navbar">
+            <div class="page-content">
+
+                <div class="navbarpages navbarpagesbg">
+                    <div class="navbar_left">
+                        <a href="{{ path('app_logout') }}" onclick='logout();'><img
+                                    src="{{ asset('images/icons/white/logout2.png') }}" style="width:25px" alt=""
+                                    title=""/><span style="color:#fff"><b> Logout</b></span></a>
+                    </div>
+
+
+                </div>
+
+
+                <div id="pages_maincontent" style="background-color:#bcbec0">
+
+                    <div class="user_login_info">
+                        <div class="user_thumb">
+                            <img src="{{ asset('images/profile.jpg') }}" alt="" title=""/>
+                            <div class="user_details">
+                                <p style="padding-left:20px; margin-top:60px">Welcome, <span class="mwpf_black"
+                                                                                             id="username">{% if profile %} {{ profile.name }} {% else %} {{ app.user }} {% endif %}</span>
+                                </p>
+                            </div>
+                            <div class="user_avatar"><img src="{{ asset('images/avatar.jpg') }}" alt="" title=""
+                                                          width="80%" img="responsive"/></div>
+                        </div>
+
+                        <div class="signup_bottom">
+                            <a href="#">Fund Balance <b><span class="mwpf_black_" id="fundBalance"></span> </b></a>
+                        </div>
+
+                        <nav class="user-nav">
+
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="{{ asset('images/icons/white/user.png') }}" style="width:25px"
+                                                     alt="" title=""/><span>PROFILE </span></a>
+                                    <div class="accordion" align="left">
+
+                                        <div class="accordion__item">
+                                            <input class="accordion__input" id="acc9" type="radio" name="accordion">
+                                            <label class="accordion__label profile" for="acc9">Personal
+                                                details<span></span></label>
+                                            <div class="accordion__content">
+                                                <ul class="responsive_table" id="profile">
+                                                    {% if profile %}
+                                                        <li>
+                                                            <div class="table_section">Firstname:</div>
+                                                            <div class="table_section"><b>{{ profile.firstName }}</b>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="table_section">Surname:</div>
+                                                            <div class="table_section"><b>{{ profile.surname }}</b>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="table_section">Date of birth:</div>
+                                                            <div class="table_section"><b>{{ profile.dateOfBirth }}</b>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="table_section">ID number:</div>
+                                                            <div class="table_section"><b>{{ profile.idNumber }}</b>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="table_section">Date Joined Fund:</div>
+                                                            <div class="table_section">
+                                                                <b>{{ profile.dateJoinedFund }}</b>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="table_section">Date Pensionable Fee:</div>
+                                                            <div class="table_section">
+                                                                <b>{{ profile.datePensionableService }}</b></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="table_section">Normal Retirement Date:</div>
+                                                            <div class="table_section">
+                                                                <b>{{ profile.normalRetirementDate }}</b></div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="table_section">Date Exit:</div>
+                                                            <div class="table_section"><b>{{ profile.dateOfExit }}</b>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="table_section">Member No:</div>
+                                                            <div class="table_section"><b>{{ profile.memberNumber }}</b>
+                                                            </div>
+                                                        </li>
+                                                    {% else %}
+                                                        <li>
+                                                            <div class="table_section">Error:</div>
+                                                            <div class="table_section"><b>Your profile could not be
+                                                                    retried</b>
+                                                            </div>
+                                                        </li>
+                                                    {% endif %}
+                                                    <li>
+                                                        <div class="table_section"></div>
+                                                        <div class="table_section"><b></b></div>
+                                                        <br><br></li>
+                                                </ul>
+
+                                            </div>
+                                            <br>
+                                            <br>
+
+
+                                        </div>
+
+
+                                        <div class="accordion__item">
+                                            <input class="accordion__input" id="acc11" type="radio" name="accordion">
+                                            <label class="accordion__label update" for="acc11">Update
+                                                Password<span></span></label>
+                                            <div class="accordion__content">
+                                                <ul class="responsive_table" id="updatePassword">
+                                                    <br><br>
+
+                                                    <h4>UPDATE PASSWORD</h4>
+                                                    <div class="loginform">
+                                                        <form id="UpdatePasswordForm" method="post">
+                                                            <input type="text" name="passwordForm_password"
+                                                                   id="passwordForm_password"
+                                                                   class="form_input required"
+                                                                   placeholder="New Password" required/>
+                                                            <input type="text" name="passwordForm_cellphone"
+                                                                   id="passwordForm_cellphone"
+                                                                   class="form_input required"
+                                                                   placeholder="Mobile Number"
+                                                                   value="{{ app.user.cellphone }}" required/>
+                                                            <input type="submit" name="submitPasswordUpdate"
+                                                                   class="form_submit" id="submitPasswordUpdate"
+                                                                   value="Update Password">
+                                                        </form>
+
+                                                    </div>
+
+                                                </ul>
+
+                                            </div>
+                                            <br>
+                                            <br>
+                                        </div>
+
+                                        <div class="accordion__item">
+                                            <input class="accordion__input" id="acc12" type="radio" name="accordion">
+                                            <label class="accordion__label infoUpdate" for="#">Info Update<span></span></label>
+                                            <div class="accordion__content">
+                                                <ul class="responsive_table" id="updatePassword">
+                                                    <
+                                                    <li>
+                                                        br><br>
+
+                                                        <h4>INFO UPDATE</h4>
+                                                        <input type="text" id="passUpCheck" value="no"/>
+                                                        <div class="loginform">
+                                                            <form id="InfoUpdateForm" method="post" action="">
+
+                                                                <input type="hidden" name="session_1" id="session_1"
+                                                                       class="form_input" disabled/>
+                                                                <input type="hidden" name="username_f" id="username_f"
+                                                                       class="form_input" required disabled/>
+                                                                <input type="text" name="n_password" id="n_password"
+                                                                       class="form_input required"
+                                                                       placeholder="Mobile Number" required/>
+                                                                <input type="textarea" name="mobile1" id="mobile1"
+                                                                       class="form_input required" placeholder="Address"
+                                                                       required/>
+
+                                                                <input type="button" name="submitUpdate"
+                                                                       class="form_submit" id="submitUpdate"
+                                                                       value="Update Details"/>
+                                                            </form>
+
+                                                        </div>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+                                            <br>
+                                            <br>
+
+
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <li><a href="#"><img src="{{ asset('images/icons/white/briefcase.png') }}"
+                                                     style="width:25px" alt="" title=""/><span>BENEFITS</span></a>
+                                    <div class="accordion" align="left">
+                                        <div class="accordion__item">
+                                            <input class="accordion__input" id="acc1" type="radio" name="accordion">
+                                            <label class="accordion__label benefit" for="acc1"
+                                                   onclick="getBenefitStatementFile()">Benefit Statement
+                                                <span></span></label>
+                                            <div class="accordion__content" id="bstatement"><br>
+                                                <p>
+                                                    <a href="{{ path('app_download_benefits_statement') }}">View Benefit
+                                                        Statement</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__item">
+                                            <input class="accordion__input" id="acc2" type="radio" name="accordion">
+                                            <label class="accordion__label investment" for="acc2"
+                                                   id="investmentInfoLabel" onclick="getInvestments()">Investment
+                                                Info<span></span></label>
+                                            <div class="accordion__content">
+                                                <ul class="responsive_table" id="investmentInfo">
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__item">
+                                            <input class="accordion__input" id="acc3" type="radio" name="accordion">
+                                            <label class="accordion__label contribution" for="acc3"
+                                            >Contribution Rate
+                                                <span></span></label>
+                                            <div class="accordion__content">
+                                                <ul class="responsive_table" id="contribution">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__item">
+                                            <input class="accordion__input" id="acc4" type="radio" name="accordion">
+                                            <label class="accordion__label ben" for="acc4">Nominated Beneficiaries
+                                                <span></span></label>
+                                            <div class="accordion__content">
+                                                <ul class="responsive_table" id="nominatedBeneficiaries">
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li><a href="#"><img src="{{ asset('images/icons/white/logout.png') }}"
+                                                     style="width:25px" alt="" title=""/><span>CLAIMS</span></a>
+                                    <div class="accordion" align="left">
+                                        <div class="accordion__item">
+                                            <input class="accordion__input" id="acc5" type="radio" name="accordion">
+                                            <label class="accordion__label claim" for="acc5">Claim Status <span></span></label>
+                                            <div class="accordion__content"><br>
+                                                <a href="#"></a>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__item">
+                                            <input class="accordion__input" id="acc7" type="radio" name="accordion">
+                                            <label class="accordion__label form" for="acc7">Nomination Form
+                                                <span></span></label>
+                                            <div class="accordion__content"><br>
+                                                <a href="{{ asset('pdf/membernomination.pdf') }}" target="_blank">Download
+                                                    Form </a><br><br>
+                                            </div>
+                                        </div>
+                                        <div class="accordion__item">
+                                            <input class="accordion__input" id="acc8" type="radio" name="accordion">
+                                            <label class="accordion__label unc" for="acc8">Unclaimed Benefits
+                                                <span></span></label>
+                                            <div class="accordion__content">
+                                                <ul class="responsive_table">
+                                                    <li class="table_row">
+                                                        <div class="table_section"></div>
+                                                        <div class="table_section"><b> </b></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li><a href="{{ path('app_logout') }}"
+                                    ><img src="{{ asset('images/icons/white/lock.png') }}" style="width:25px" alt=""
+                                          title=""/><span>Logout</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        const loadingText = 'Please wait...';
+
+        const getInvestmentInfo = () => {
+            const investmentInfoElement = document.getElementById('investmentInfo');
+            const fundBalanceElement = document.getElementById('fundBalance');
+
+            investmentInfoElement.innerHTML = loadingText;
+            fundBalanceElement.innerHTML = loadingText;
+
+            // fetch investment info
+            fetch("{{ path('api_investment_info') }}")
+                .then(response => response.json())
+                .then(data => {
+                    investmentInfoElement.innerHTML = `<li><div class="table_section">Date: </div><div class="table_section"><b>${data?.date || ''}</b></div></li><li><div class="table_section">Product: </div><div class="table_section"><b>${data?.product || ''}</b></div></li><li><div class="table_section">Units: </div><div class="table_section"><b>${data?.units || ''}</b></div></li><li><div class="table_section">Price: </div><div class="table_section"><b>${data?.price || ''}</b></div></li><li><div class="table_section">Value: </div><div class="table_section"><b>${data?.value || ''}</b></div></li></b></div><div class="table_section"></div><div class="table_section"><b></b></div><br><br>`;
+                    fundBalanceElement.innerHTML = data?.value || 'R 0.00';
+                })
+                .catch(err => {
+                    investmentInfoElement.innerHTML = err?.message;
+                    fundBalanceElement.innerHTML = 'R 0.00';
+                    console.error(err);
+                });
+        };
+
+        const getContributionRate = () => {
+            const element = document.getElementById('contribution');
+
+            element.innerHTML = loadingText;
+
+            fetch("{{ url('api_contribution_rate') }}")
+                .then(response => response.json())
+                .then(data => {
+                    element.innerHTML = `<li><div class="table_section">EEDeemedFixed: </div><div class="table_section"><b>${data?.eeDeemedFixed || ''}</b></div></li><li><div class="table_section">EEFixed: </div><div class="table_section"><b>${data?.eeFixed || ''}</b></div></li><li><div class="table_section">Effective Date: </div><div class="table_section"><b>${data?.effectiveDate || ''}</b></div></li><li><div class="table_section">ER Fixed: </div><div class="table_section"><b>${data?.erFixed || ''}</b></div></li><li><div class="table_section">Esc Percentage: </div><div class="table_section"><b>${data?.escPercentage || ''}</b></div></li><br><br>`;
+                })
+                .catch(err => {
+                    element.innerHTML = `<li>${err?.message}</li>`
+                });
+        };
+
+        const getNominatedBeneficiaries = () => {
+            const element = document.getElementById('nominatedBeneficiaries');
+            element.innerHTML = loadingText;
+
+            // fetch investment info
+            fetch("{{ path('api_nominated_beneficiaries') }}")
+                .then(response => response.json())
+                .then(data => {
+                    element.innerHTML = '';
+
+                    if (!data.length) {
+                        element.innerHTML = '<span>No beneficiaries found</span>';
+                    }
+
+                    for (const item of Array.from(data)) {
+                        const html = `<li><a href="#">EffectiveDate: </a>${item?.effectiveDate}<br><a href="#">Firstname: </a>${item.firstName}<br><a href="#">Surname: </a>${item.surname}<br><a href="#">IDNumber: </a>${item.idNumber}<br/><br/><a href="#">DateOfBirth: </a>${item.dateOfBirth}<br><a href="#">Gender: </a>${item.gender}<br><a href="#">Phonenumber: </a>${item.phoneNumber}<br><a href="#">Address: </a>${item.address}<br><a href="#">BankAccount: </a>${item.bankAccount}<br><a href="#">BankAccountHolder: </a>${item.bankAccountHolder}<br><a href="#">BranchCode: </a>${item.branchCode}<br><a href="#">BranchName: </a>${item.branchName}<br><a href="#">BankName: </a>${item.branchName}<br><a href="#">BeneficiaryType: </a>${item.beneficiaryType}<br><a href="#">Percentage: </a>${item.percentage}<br><h3>----------------------------------------------</h3><br></li>`;
+                        element.innerHTML += html;
+                    }
+                })
+                .catch(err => {
+                    element.innerHTML = `<li>${err?.message}</li>`;
+                    console.error(err);
+                });
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            getInvestmentInfo();
+            getContributionRate();
+            getNominatedBeneficiaries();
+        });
+    </script>
+
+    <script>
+        const updatePassword = () => {
+            const submitButton = document.getElementById('submitPasswordUpdate');
+            submitButton.value = 'Loading...';
+            submitButton.disabled = true;
+
+            const passwordElement = document.getElementById('passwordForm_password');
+            const cellphoneElement = document.getElementById('passwordForm_cellphone');
+
+            fetch("{{ path('api_update_password') }}", {
+                method: 'POST',
+                body: JSON.stringify({
+                    cellphone: cellphoneElement.value,
+                    password: passwordElement.value,
+                }),
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    passwordElement.value = '';
+                    cellphoneElement.value = '{{ app.user.cellphone }}';
+
+                    Swal.fire({
+                        icon: "success",
+                        text: data,
+                    });
+
+                    console.log(data); // todo: display in error message
+                })
+                .catch(err => {
+                    console.error({err});
+
+                    Swal.fire({
+                        icon: "error",
+                        text: err?.message || 'An error occurred whilst trying to recover your password',
+                    });
+                })
+                .finally(() => {
+                    submitButton.value = 'Update Password';
+                    submitButton.disabled = false;
+                });
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const updatePasswordForm = document.getElementById('UpdatePasswordForm');
+
+            updatePasswordForm.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                updatePassword();
+            })
+        });
+    </script>
+{% endblock %}
